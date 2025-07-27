@@ -103,6 +103,8 @@ The API endpoints are categorized into Job Seekers API, Companies API, and Job L
     * **AI Tips Button Engagement**: 100% of Group B users clicked the "AI Tips" button at least once, demonstrating high interest.
     * **Impact on Application Decisions**: 71.4% of Group B users reported that AI advice directly impacted their application decisions, confirming that the feature provides actionable insights that users trust enough to affect their behavior.
     * **More Selective Application Behavior**: Users with AI guidance submitted fewer applications on average, potentially leading to higher quality applications and better matches.
+## Demo Link:
+[Youtube link](https://www.youtube.com/watch?v=h8Pjd4KBW7E)
 
 ## Future Plans
 
