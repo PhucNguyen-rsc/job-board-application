@@ -1,0 +1,11 @@
+-r requirements.txt
+flake8==7.1.1
+pytest==8.3.4
+pytest-cov==6.0.0
+pytest-mongodb==2.4.0
+mongomock
+coverage
+pytest-flask
+pytest-selenium
+selenium
+webdriver-manager

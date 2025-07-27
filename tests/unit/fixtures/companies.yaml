@@ -1,0 +1,14 @@
+- name: "Apple"
+  email: "app@apple.com"
+  country: "United States"
+  description: "IT company"
+
+- name: "Nvidia"
+  email: "app@nvidia.com"
+  country: "United States"
+  description: "GPU company"
+
+- name: "SK Hynix"
+  email: "app@skhynix.com"
+  country: "Republic of Korea"
+  description: "Memory Foundry company"

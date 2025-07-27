@@ -1,0 +1,26 @@
+- first: John
+  last: Doe
+  email: jd@gmail.com
+  expertise: Programming
+  years: 12
+  applied: []
+  accepted: []
+  rejected: []
+
+- first: Alice
+  last: Bob
+  email: ab@gmail.com
+  expertise: Finance
+  years: 9
+  applied: []
+  accepted: []
+  rejected: []
+
+- first: Jon
+  last: Appleseed
+  email: jap@gmail.com
+  expertise: Computer Security
+  years: 7
+  applied: []
+  accepted: []
+  rejected: []

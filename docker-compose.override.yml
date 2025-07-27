@@ -1,0 +1,9 @@
+version: '3.4'
+
+services:
+  mongo:
+    environment:
+      - MONGO_URI=${MONGO_URI}
+    env_file:
+      - .env
+    command: mongod --auth # Enable mongoDB Authentication

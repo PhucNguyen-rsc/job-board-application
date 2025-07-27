@@ -1,0 +1,59 @@
+version: '3'
+
+services:
+  backend:
+    container_name: flask-backend
+    build: .
+    ports:
+      - "8000:8000"  
+    environment: 
+      - DEV_MONGODB_URI=${DEV_MONGODB_URI}
+      - PROD_MONGODB_URI=${PROD_MONGODB_URI}
+      - UNIT_TEST_MONGODB_URI=${UNIT_TEST_MONGODB_URI}
+      - PROD_DB_NAME=${PROD_DB_NAME}
+      - DEV_DB_NAME=${DEV_DB_NAME}
+      - TEST_DB_NAME=${TEST_DB_NAME}
+      - JWT_SECRET_KEY=${JWT_SECRET_KEY}
+    env_file:
+      - .env
+
+  mongo: 
+    image: mongo:latest
+    container_name: mongo
+    ports:
+      - "27017:27017"
+    environment:
+      - DEV_MONGODB_URI=${DEV_MONGODB_URI}
+      - PROD_MONGODB_URI=${PROD_MONGODB_URI}
+      - UNIT_TEST_MONGODB_URI=${UNIT_TEST_MONGODB_URI}
+      - INTEGRATION_TEST_MONGODB_URI=${INTEGRATION_TEST_MONGODB_URI}
+      - PROD_DB_NAME=${PROD_DB_NAME}
+      - DEV_DB_NAME=${DEV_DB_NAME}
+      - TEST_DB_NAME=${TEST_DB_NAME}
+    env_file:
+      - .env
+    volumes:
+      - mongo_data:/data/db
+
+  frontend:
+    container_name: frontend
+    build: ./frontend
+    ports:
+      - "3000:8080"
+    environment:
+      - BACKEND_URL=${VITE_BACKEND_URL}
+    env_file:
+      - .env
+
+  nginx:
+    build: ./nginx
+    container_name: nginx
+    ports:
+      - "8080:8080"
+    depends_on:
+      - backend
+      - frontend
+
+volumes:
+  mongo_data:
+    driver: local

@@ -1,0 +1,1 @@
+trivy fs --skip-dirs .venv/ --skip-dirs __pycache__/ --skip-dirs .pytest_cache/ --skip-dirs coverage_html_report --scanners vuln,secret,misconfig . 

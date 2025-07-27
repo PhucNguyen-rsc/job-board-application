@@ -1,0 +1,25 @@
+# IMPORTANT: This is a sample template provided as a starting point for your .env file
+# 
+# In practice, .env files should NEVER be committed to version control
+# as they often contain sensitive information (API keys, passwords, etc.)
+#
+# Copy this file into a file named .env and edit it as needed
+# Your new .env file will not be tracked by git by default (see .gitignore)
+# Thus, you are the only one who can see any changes made to your .env file
+# In your Running instructions in the README file, let us know what environment
+# variables are needed to run your code
+
+# MongoDB URIs for different environments
+DEV_MONGODB_URI=mongodb://localhost:27017
+PROD_MONGODB_URI=mongodb://localhost:27017
+UNIT_TEST_MONGODB_URI=
+INTEGRATION_TEST_MONGODB_URI=mongodb://localhost:27017
+
+# Database names
+## Note that TEST_DB_NAME is intentionally left empty because we use a mock database in unit testing
+PROD_DB_NAME=job_board
+DEV_DB_NAME=job_board_dev
+TEST_DB_NAME=job_board_test
+
+JWT_SECRET_KEY=my_super_secret_key
+BACKEND_SECRET_KEY=secret_for_job_board_d_backend
